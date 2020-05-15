@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-logo">
+            <a href="首页.html">
+            </a>
+        </div>
+    </header>
+    <main>
+        <div class="main-wrap clear_fix">
+            <div class="layout">
+                <!-- 表格 -->
+                <div class="nav-table"> 
+                    <a href="#">帐号登录</a>
+                    <span></span>
+                    <a href="#">扫码登录</a>
+                </div>
+                <!-- 输入框 -->
+                <div class="cont-table">
+                    <input id="userId" class="text" type="text" placeholder="邮箱/手机号码/小米ID">
+                    <input id="userPass" class="text" placeholder="密码">
+                    <div id="tishi" class="tishi">
+                        <i>!</i>
+                        <span>用户名或密码不正确</span>
+                    </div>
+                    <input id="Btn" class="btn" type="submit" value="登录">
+                    <div class="clear_fix">
+                        <a href="注册.html">手机短信登录/注册</a>
+                        <div>
+                            <a href="#">立即注册</a>
+                            <span>|</span>
+                            <a href="#">忘记密码?</a>
+                        </div>
+
+                    </div>
+                    <div class="other">
+                        <p>—————————其他方式登录————————</p>
+                        <ul>
+                            <li><a href="#"><i class="iconfont icon-qq"></i></a></li>
+                            <li><a href="#"><i class="iconfont icon-weibo"></i></a></li>
+                            <li><a href="#"><i class="iconfont icon-iconfonticons"></i></a></li>
+                            <li><a href="#"><i class="iconfont icon-weixin"></i></a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="f-link">
+            <ul>
+                <li><a href="#">简体</a>|</li>
+                <li><a href="#">繁体</a>|</li>
+                <li><a href="#">English</a>|</li>
+                <li><a href="#">常见问题</a>|</li>
+                <li><a href="#">隐私政策</a>|</li>
+            </ul>
+        </div>
+        <p class="f-banq">
+            小米公司版权所有-京ICP备10046444-<span><img src="../img/ghs.png" alt=""></span>京公网安备11010802020134号-京ICP证110507号
+        </p>
+    </footer>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/cookieTools.js"></script>
+    <script>
+        $(function () {
+            $("#Btn").click(function () {
+                $.post(
+                    "../php/login.php",
+                    {
+                        "userid": $("#userId").val(),
+                        "userpass": $("#userPass").val()
+                    },
+                    function (data) {
+                        if (data == "success") {
+                            //保存cookie：
+                            // saveCookie("username",$("#username").val());
+                            getCookie("username")
+                            console.log(getCookie("username"))
+                            setTimeout(() => {
+                                location.href = "首页.html";
+                            }, 200);
+                        } else if (data == "fail") {
+                            $("#tishi").css({
+                                "display":"block"
+                            });
+                        } else {
+                            $("#tishi").html("不好意思，亲，服务器出错了！");
+                        }
+                    }
+                );
+            });
+        });
+
+    </script>
+</body>
+</html>

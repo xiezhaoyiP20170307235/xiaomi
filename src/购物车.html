@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小米商城</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../icon/iconfont.css">
+    <link rel="stylesheet" href="../css/car.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <div class="header-wrap">
+            <div class="header-logo">
+                <a href="./首页.html"></a>
+            </div>
+            <div class="header-title">
+                <h2>我的购物车</h2>
+                <p>温馨提示：产品是否购买成功，以最终下单为准哦，请尽快结算</p>
+            </div>
+            <div class="header-car">
+                <span class="user">
+                    <a href="#">
+                        <span id="getuserid">98_xiezy</span>
+                        <i class="iconfont icon-xiasanjiaoxing"></i>
+                    </a>
+                    <ul class="user-li">
+                        <li><a href="#">个人中心</a></li>
+                        <li><a href="#">评价晒单</a></li>
+                        <li><a href="#">我的喜欢</a></li>
+                        <li><a href="#">小米帐号</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </span>
+                <span>|</span>
+                <a href="#">我的订单</a>
+            </div>
+        </div>
+    </header>
+    <!-- main -->
+    <main>
+        <div class="main-wrap">
+            <!-- 商品选择 -->
+            <div id="car-box">
+                <!-- <table cellspacing="0">
+                        <tr class="t-title">
+                            <td>
+                                <input type="checkbox" >全选
+                            </td>
+                            <td>编号</td>
+                            <td>商品名称</td>
+                            <td>价格</td>
+                            <td>数量</td>
+                            <td>金额</td>
+                            <td>操作</td>
+                        </tr>
+                        
+                        <tr class="item-box">
+                        <td> 
+                            <input class="tdinp" type="checkbox" >
+                        </td>
+                        <td class="goodsId">${goods.goodsId}</td>
+                        <td>${goods.goodsName}<a><img src="${goods.goodsImg}"></a></td>
+                        <td>${goods.goodsPrice}</td>
+                        <td class="item-num">
+                                <input type="button" class="reduceBtn" value="-">
+                                <span id="item-count">${goods.goodsCount}</span>
+                                <input type="button" class="addBtn" value="+">
+                        </td>
+                        <td>${goods.goodsPrice*goods.goodsCount}</td>
+                        <td>
+                            <i class="iconfont icon-cuo delBtn"></i>
+                        </td>
+                    </tr>
+                        <tr class="car-b">
+                            <td colspan="6" >
+                                合计：<span>0</span>元
+                            </td>
+                            <td><input type="bntton" id="gobtn" value="去结算"></td>
+                            
+                        </tr>
+                </table> -->
+            </div>
+
+            <!-- 猜你喜欢 -->
+            <div class="car-like">
+                <h2>
+                    <span>买购物车中商品的人还买了</span>
+                </h2>
+                <div class="like-li clear_fix">
+                    <ul>
+                        <li class="clear-l">
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li class="clear-l">
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                        <li>
+                            <dl class="li-item">
+                                <dt>
+                                    <a href="#"><img src="../img/like01.jpg" alt=""></a>
+                                </dt>
+                                <dd> 小米巨能写中性笔 </dd>
+                                <dd>9.99元</dd>
+                                <dd> 2068人好评 </dd>
+                                <dd></dd>
+                            </dl>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- footer -->
+    <footer>
+        <div class="footer-wrap">
+            <div class="footer-t">
+                <div class="f-service">
+                    <ul class="clear_fix">
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-editor2"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-qitianwuliyoutuihuan"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-15tianwuliyoutuihuo"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-lipin"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-icon-"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="f-links clear_fix">
+                    <dl>
+                        <dt></dt>
+                        <dd>帮助中心</dd>
+                        <dd><a href="#">账户管理</a></dd>
+                        <dd><a href="#">购物指南</a></dd>
+                        <dd><a href="#">订单操作</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>服务支持</dd>
+                        <dd><a href="#">销售政策</a></dd>
+                        <dd><a href="#">自助服务</a></dd>
+                        <dd><a href="#">相关下载</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>线下门店</dd>
+                        <dd><a href="#">小米之家</a></dd>
+                        <dd><a href="#">服务网点</a></dd>
+                        <dd><a href="#">授权体验店</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>关于小米</dd>
+                        <dd><a href="#">了解小米</a></dd>
+                        <dd><a href="#">加入小米</a></dd>
+                        <dd><a href="#">投资者关系</a></dd>
+                        <dd><a href="#">廉洁举报</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>关于我们</dd>
+                        <dd><a href="#">新浪微博</a></dd>
+                        <dd><a href="#">官方微信</a></dd>
+                        <dd><a href="#">联系我们</a></dd>
+                        <dd><a href="#">公益基金会</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>特色服务</dd>
+                        <dd><a href="#">F码通道</a></dd>
+                        <dd><a href="#">礼物码</a></dd>
+                        <dd><a href="#">防伪查询</a></dd>
+                    </dl>
+                    <div class="f-phone">
+                        <p class="phone">400-100-5678</p>
+                        <p>8:00-18:00（仅收市话费）</p>
+                        <a href="#">
+                            <i class="iconfont icon-xinxi"></i>
+                            人工服务
+                        </a>
+                        <div class="f-icon">
+                            关注小米：
+                            <a href="#"></a>
+                            <a href="#"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-b">
+                <div class="f-container">
+                    <div class="f-logo"></div>
+                    <div class="f-text">
+                        <p class="f-li">
+                            <a href="#">小米商城</a><span>|</span>
+                            <a href="#">MIUI</a><span>|</span>
+                            <a href="#">米家</a><span>|</span>
+                            <a href="#">米聊</a><span>|</span>
+                            <a href="#">多看</a><span>|</span>
+                            <a href="#">政企服务</a><span>|</span>
+                            <a href="#">小米天猫电</a><span>|</span>
+                            <a href="#">小米集团隐私政策/a><span>|</span>
+                                <a href="#">小米公司儿童信息保护规则</a><span>|</span>
+                                <a href="#">小米商城隐私政策</a><span>|</span>
+                                <a href="#">小米撒商城用户协议</a><span>|</span>
+                                <a href="#">问题反馈 Select Location</a><span>|</span>
+                        </p>
+                        <p>
+                            © mi.com 京ICP证110507号 京ICP备10046444号 京公网安备11010802020134号 京网文[2020]0276-042号<br>
+                            （京）网械平台备字（2018）第00005号 互联网药品信息服务资格证 (京)-非经营性-2014-0090 营业执照 医疗器械质量公告<br>
+                            增值电信业务许可证 网络食品经营备案（京）【2018】WLSPJYBAHF-12 食品经营许可证<br>
+                            违法和不良信息举报电话：185-0130-1238 知识产权侵权投诉 本网站所列数据，除特殊说明，所有数据均出自我司实验室测试
+                        </p>
+                    </div>
+                    <div class="fB-links">
+                        <a href="#"><img src="../img/links01.png" alt=""></a>
+                        <a href="#"><img src="../img/links02.png" alt=""></a>
+                        <a href="#"><img src="../img/links03.png" alt=""></a>
+                        <a href="#"><img src="../img/links04.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="f-title">
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+    <script src="../js/cookieTools.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/shoppingcar.js"></script>
+</body>
+
+</html>
